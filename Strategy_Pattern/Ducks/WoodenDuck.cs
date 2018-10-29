@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Strategy_Pattern.Ducks
 {
-    class ExoticDuck : DuckBase
+    class WoodenDuck
     {
-        public override void Display()
-        {
-            Console.WriteLine("I'm an exotic duck!");
-        }
     }
 }

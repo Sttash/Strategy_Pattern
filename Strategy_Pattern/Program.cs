@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Strategy_Pattern.Ducks;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,19 +11,19 @@ namespace Strategy_Pattern
     {
         static void Main(string[] args)
         {
-            SimpleDuck simpleDuck = new SimpleDuck();
-            ExoticDuck exoticDuck = new ExoticDuck();
-            
-            simpleDuck.Display();
-            simpleDuck.Quack();
-            simpleDuck.Swim();
+            List<DuckBase> ducks = new List<DuckBase>
+            {
+                new ExoticDuck(),
+                new SimpleDuck()
+            };
 
-            Console.WriteLine();
-
-            exoticDuck.Display();
-            exoticDuck.Quack();
-            exoticDuck.Swim();
-
+            foreach (var duckBase in ducks)
+            {
+                duckBase.Display();
+                duckBase.Quack();
+                duckBase.Swim();
+                Console.WriteLine();
+            }
             Console.ReadKey();
         }
     }
