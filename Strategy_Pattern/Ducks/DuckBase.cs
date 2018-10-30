@@ -8,11 +8,6 @@ namespace Strategy_Pattern.Ducks
 {
     public abstract class DuckBase
     {
-        public void Quack()
-        {
-            Console.WriteLine("Quack! Quack!");
-        }
-
         public void Swim()
         {
             Console.WriteLine("I can swim!");

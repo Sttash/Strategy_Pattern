@@ -14,14 +14,19 @@ namespace Strategy_Pattern
             List<DuckBase> ducks = new List<DuckBase>
             {
                 new ExoticDuck(),
-                new SimpleDuck()
+                new SimpleDuck(),
+                new WoodenDuck(),
+                new RubberDuck()
             };
 
-            foreach (var duckBase in ducks)
+            foreach (var duck in ducks)
             {
-                duckBase.Display();
-                duckBase.Quack();
-                duckBase.Swim();
+                duck.Display();
+                duck.Swim();
+                if (duck is IQuackable)
+                    (duck as IQuackable).Quack();
+                if (duck is IFlyable)
+                    (duck as IFlyable).Fly();
                 Console.WriteLine();
             }
             Console.ReadKey();
