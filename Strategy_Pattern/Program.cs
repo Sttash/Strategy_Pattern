@@ -23,10 +23,8 @@ namespace Strategy_Pattern
             {
                 duck.Display();
                 duck.Swim();
-                if (duck is IQuackable)
-                    (duck as IQuackable).Quack();
-                if (duck is IFlyable)
-                    (duck as IFlyable).Fly();
+                duck.Quack();
+                duck.Fly();
                 Console.WriteLine();
             }
             Console.ReadKey();

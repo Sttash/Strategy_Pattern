@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Strategy_Pattern.Ducks
+namespace Strategy_Pattern.Fly
 {
-    public interface IFlyable
+    public class NoFly : IFlyable
     {
-        void Fly();
+        public void Fly()
+        {
+        }
     }
 }

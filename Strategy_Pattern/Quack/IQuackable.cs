@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Strategy_Pattern.Ducks
+namespace Strategy_Pattern.Quack
 {
     public interface IQuackable
     {
