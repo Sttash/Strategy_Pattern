@@ -8,25 +8,35 @@ using System.Threading.Tasks;
 
 namespace Strategy_Pattern.Ducks
 {
-    public abstract class DuckBase
+    public abstract class DuckBase // базовый класс утки
     {
-        protected IFlyable flyBehaviour;
-        protected IQuackable quackBehaviour;
+        protected IFlyable flyBehaviour;        // интерфейсные поля, предназначенные
+        protected IQuackable quackBehaviour;    // для переопределения в тех классах, где это необходимо
 
-        public DuckBase()
+        public DuckBase()   // конструктор по умолчанию
         {
-            flyBehaviour = new FlyWithWings();
-            quackBehaviour = new SimpleQuack();
+            flyBehaviour = new FlyWithWings();  // поведение "полёт" по умолчанию
+            quackBehaviour = new SimpleQuack(); // поведение "кряканье" по умолчанию
         }
 
-        public void Swim()
+        public void SetQuackBehaviour(IQuackable newQuackBehaviour) // метод для динамического переопределения кряканья
         {
-            Console.WriteLine("I can swim!");
+            quackBehaviour = newQuackBehaviour;
         }
 
-        public void Quack()
+        public void SetFlyBehaviour(IFlyable newFlyBehaviour)   // метод для динамического переопределения полёта
         {
-            quackBehaviour.Quack();
+            flyBehaviour = newFlyBehaviour;
+        }
+
+        public void Swim() // этот метод неизменяемый, поэтому реализация одна общая
+        {
+            Console.WriteLine("I can swim!"); 
+        }
+
+        public void Quack() // Quack и Swim - изменяемые методы, каждый класс выполняет подходящую реализацию
+        {
+            quackBehaviour.Quack(); // выполняется своя реализация интерфейса
         }
 
         public void Fly()
@@ -34,6 +44,6 @@ namespace Strategy_Pattern.Ducks
             flyBehaviour.Fly();
         }
 
-        public abstract void Display();
+        public abstract void Display(); // абстрактный метод, реализуемый во всех классах по-своему
     }
 }

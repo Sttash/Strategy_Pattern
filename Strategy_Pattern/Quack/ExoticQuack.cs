@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Strategy_Pattern.Quack
 {
-    public class ExoticQuack : IQuackable
+    public class ExoticQuack : IQuackable // реализация интерфейса для ExoticDuck
     {
-        public void Quack()
+        public void Quack() // реализация единственного метода интерфейса
         {
             Console.WriteLine("Meow! Meow!");
         }

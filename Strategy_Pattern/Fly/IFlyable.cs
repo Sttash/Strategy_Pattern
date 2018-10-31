@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Strategy_Pattern.Fly
 {
-    public interface IFlyable
+    public interface IFlyable // интерфейс полёта
     {
         void Fly();
     }

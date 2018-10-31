@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Ducks\DuckBase.cs" />
     <Compile Include="Ducks\ExoticDuck.cs" />
+    <Compile Include="Ducks\UpgradableDuck.cs" />
     <Compile Include="Fly\FlyWithWings.cs" />
     <Compile Include="Fly\IFlyable.cs" />
     <Compile Include="Fly\NoFly.cs" />
