@@ -19,17 +19,17 @@ namespace Strategy_Pattern.Ducks
             quackBehaviour = new SimpleQuack();
         }
 
-        public virtual void Quack()
-        {
-            quackBehaviour.Quack();
-        }
-
         public void Swim()
         {
             Console.WriteLine("I can swim!");
         }
 
-        public virtual void Fly()
+        public void Quack()
+        {
+            quackBehaviour.Quack();
+        }
+
+        public void Fly()
         {
             flyBehaviour.Fly();
         }

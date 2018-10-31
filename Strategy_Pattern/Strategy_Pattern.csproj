@@ -63,6 +63,7 @@
     <Compile Include="Fly\FlyWithWings.cs" />
     <Compile Include="Fly\IFlyable.cs" />
     <Compile Include="Fly\NoFly.cs" />
+    <Compile Include="Quack\ExoticQuack.cs" />
     <Compile Include="Quack\IQuackable.cs" />
     <Compile Include="Ducks\RubberDuck.cs" />
     <Compile Include="Ducks\WoodenDuck.cs" />

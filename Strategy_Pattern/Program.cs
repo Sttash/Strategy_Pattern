@@ -25,6 +25,7 @@ namespace Strategy_Pattern
                 duck.Swim();
                 duck.Quack();
                 duck.Fly();
+
                 Console.WriteLine();
             }
             Console.ReadKey();
