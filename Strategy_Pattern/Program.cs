@@ -34,7 +34,7 @@ namespace Strategy_Pattern
             DuckBase upgradableDuck = new UpgradableDuck(); // динамический объект, поддерживающий изменения
             upgradableDuck.Display();
             upgradableDuck.Swim();
-            upgradableDuck.Quack(); //
+            upgradableDuck.Quack();
             upgradableDuck.Fly();
 
             upgradableDuck.SetFlyBehaviour(new FlyWithWings()); // пример переопределения непостоянных методов
